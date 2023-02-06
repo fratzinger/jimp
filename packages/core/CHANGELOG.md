@@ -1,10 +1,63 @@
+# v0.22.0 (Mon Feb 06 2023)
+
+### Release Notes
+
+#### Switch to fetch for url requests ([#1165](https://github.com/jimp-dev/jimp/pull/1165))
+
+The underlying library for fetching images has been changed. 
+
+`loadFromURL` can take a set of options. When in the node environment all those options are passed to phin. Any options used to pass to `phin` that are not supported by the `fetch` API will stop working.
+
+---
+
+#### 💥 Breaking Change
+
+- Switch to fetch for url requests [#1165](https://github.com/jimp-dev/jimp/pull/1165) ([@danielholmes](https://github.com/danielholmes))
+
+#### 🏠 Internal
+
+- switch from should to expect [#1163](https://github.com/jimp-dev/jimp/pull/1163) ([@hipstersmoothie](https://github.com/hipstersmoothie))
+- delete CLI package [#1162](https://github.com/jimp-dev/jimp/pull/1162) ([@hipstersmoothie](https://github.com/hipstersmoothie))
+- Change test matching strategy to include all test files [#1161](https://github.com/jimp-dev/jimp/pull/1161) ([@danielholmes](https://github.com/danielholmes))
+
+#### Authors: 2
+
+- Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothie))
+- Daniel Holmes ([@danielholmes](https://github.com/danielholmes))
+
+---
+
+# v0.21.2 (Sun Feb 05 2023)
+
+#### 🐛 Bug Fix
+
+- Change some exports to move towards more ESM compatibility [#1154](https://github.com/jimp-dev/jimp/pull/1154) ([@danielholmes](https://github.com/danielholmes))
+
+#### Authors: 1
+
+- Daniel Holmes ([@danielholmes](https://github.com/danielholmes))
+
+---
+
+# v0.21.1 (Sun Feb 05 2023)
+
+#### 🚀 Enhancement
+
+- remove export hack [#1153](https://github.com/jimp-dev/jimp/pull/1153) ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+#### Authors: 1
+
+- Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+---
+
 # v0.21.0 (Sun Feb 05 2023)
 
 ### Release Notes
 
 #### Babel Refactor ([#1149](https://github.com/jimp-dev/jimp/pull/1149))
 
-Marking this as a "breaking release" because it might change what deps need to be installed. 
+Marking this as a "breaking release" because it might change what deps need to be installed.
 
 All modules should be exported as valid cjs and esm
 
@@ -44,7 +97,7 @@ Thank you, nopeless ([@nopeless](https://github.com/nopeless)), for all your wor
 
 #### switch from browserify to webpack ([#1140](https://github.com/jimp-dev/jimp/pull/1140))
 
-This PR can be considered a breaking change as it remove the `jimp.min.js` file. 
+This PR can be considered a breaking change as it remove the `jimp.min.js` file.
 
 Instead there is now only the `jimp.js` file and we ship source maps for it.
 
